@@ -1,10 +1,22 @@
+/* eslint-disable react/jsx-pascal-case */
+/** @jsxImportSource theme-ui */
+
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import styled from "styled-components"
+import { createGlobalStyle } from "styled-components"
 
-import Header from "./header"
+import Header from "../Header"
+import Footer from "../Footer"
+
+const GlobalStyle = createGlobalStyle`
+  body, html {
+    height: 100%;
+  }
+  
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,33 +31,18 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Wrapper
-        sx={{
-          color: "primary",
-          fontFamily: "heading",
-          bg: "background",
-        }}
-      >
+      <Wrapper>
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <Footer />
       </Wrapper>
     </>
   )
 }
 
 const Wrapper = styled.div`
-  margin: "0 auto";
-  max-width: 960;
-  padding: "0 1.0875rem 1.45rem";
+  margin: 0 auto;
 `
 
 Layout.propTypes = {

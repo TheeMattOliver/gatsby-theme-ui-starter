@@ -1,19 +1,20 @@
+/* eslint-disable react/jsx-pascal-case */
+/** @jsxImportSource theme-ui */
+
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Box, Label, Input, Button } from "theme-ui"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-import theme from "../theme"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
+import Link from "../components/Link"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <SEO title="Home" />
     <h1>Hello there, hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
+
     <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}

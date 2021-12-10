@@ -1,13 +1,15 @@
-import * as React from "react"
-import { Link } from "gatsby"
+/* eslint-disable react/jsx-pascal-case */
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import * as React from "react"
+
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
+import Link from "../components/Link"
 
 const UsingSSR = ({ serverData }) => {
   return (
     <Layout>
-      <Seo title="Using SSR" />
+      <SEO title="Using SSR" />
       <h1>SSR page</h1>
       <img
         style={{ width: "300px" }}

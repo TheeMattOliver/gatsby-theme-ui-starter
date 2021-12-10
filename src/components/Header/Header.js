@@ -1,12 +1,15 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import styled from "styled-components"
+
 import { css, useColorMode } from "theme-ui"
+
+import InvisibleButton from "../Button/InvisibleButton"
+import Link from "../Link"
 
 const modes = ["light", "dark", "gray", "cyan", "book"]
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, ...props }) => {
   const [mode, setMode] = useColorMode()
   const cycleMode = () => {
     const i = (modes.indexOf(mode) + 1) % modes.length
@@ -16,38 +19,12 @@ const Header = ({ siteTitle }) => {
   return (
     <Wrapper>
       <h1>
-        <StyledLink
-          sx={{
-            color: "primary",
-          }}
-          to="/"
-        >
-          {siteTitle}
-        </StyledLink>
+        <StyledLink to="/">{siteTitle}</StyledLink>
       </h1>
       <ButtonWrapper>
-        <button
-          title="Toggle Color Mode"
-          sx={{
-            appearance: "none",
-            fontFamily: "inherit",
-            fontSize: 16,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            fontWeight: "bold",
-            border: "none",
-            m: 3,
-            p: 2,
-            color: "text",
-            bg: "gray",
-            "&:focus": {
-              outline: "2px solid",
-            },
-          }}
-          onClick={cycleMode}
-        >
+        <InvisibleButton title="Toggle Color Mode" onClick={cycleMode}>
           {mode}
-        </button>
+        </InvisibleButton>
       </ButtonWrapper>
     </Wrapper>
   )

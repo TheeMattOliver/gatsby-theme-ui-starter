@@ -84,9 +84,26 @@ const prism = {
   ".important": {},
 }
 
+const buttons = {
+  primary: {
+    color: "background",
+    bg: "primary",
+  },
+  secondary: {
+    color: "background",
+    bg: "secondary",
+  },
+  gray: {
+    color: "background",
+    bg: "gray",
+  },
+}
+
 module.exports = {
   initialColorModeName: "light",
   colors,
+  buttons,
+  prism,
   fonts: {
     body: "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif",
     monospace:
