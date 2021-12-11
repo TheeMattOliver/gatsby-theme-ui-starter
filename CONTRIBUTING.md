@@ -119,11 +119,11 @@ Follow this process if you'd like your work considered for inclusion in the proj
 - If you cloned a while ago, get the latest changes from upstream:
 
   ```shell
-  git checkout master
-  git pull upstream master
+  git checkout main
+  git pull upstream main
   ```
 
-- Create a new topic branch (off of the `master` branch) to contain your feature, change, or fix:
+- Create a new topic branch (off of the `main` or `main` branch) to contain your feature, change, or fix:
 
   ```shell
   git checkout -b <topic-branch-name>
@@ -132,13 +132,13 @@ Follow this process if you'd like your work considered for inclusion in the proj
 - Install the dependencies:
 
   ```shell
-  yarn
+  npm install
   ```
 
 - Start Gatsby's hot-reloading development environment:
 
   ```shell
-  yarn workspace docs develop
+  npm run develop
   # The documentation site will now be accessible from http://localhost:8000
   ```
 
@@ -147,7 +147,7 @@ Follow this process if you'd like your work considered for inclusion in the proj
 - Locally merge (or rebase) the upstream development branch into your topic branch:
 
   ```shell
-  git pull [--rebase] upstream master
+  git pull [--rebase] upstream main
   ```
 
 - Push your topic branch up to your fork:
