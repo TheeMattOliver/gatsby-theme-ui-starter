@@ -8,9 +8,12 @@ export default props => (
     {...props}
     activeClassName="active"
     sx={{
-      color: "inherit",
+      color: "primary",
       "&.active": {
         color: "primary",
+      },
+      "&.hover": {
+        color: "secondary",
       },
     }}
   />

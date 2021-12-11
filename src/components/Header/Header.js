@@ -31,10 +31,9 @@ const Header = ({ siteTitle, ...props }) => {
 }
 
 const Wrapper = styled.header`
-  margin-bottom: 2.5rem;
-  max-width: 960;
   display: flex;
   align-items: center;
+  padding: 2rem;
 `
 const StyledLink = styled(Link)`
   text-decoration: none;

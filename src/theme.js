@@ -1,5 +1,3 @@
-// import prism from '@theme-ui/prism/presets/theme-ui'
-
 const colors = {
   text: "#000",
   background: "#fff",

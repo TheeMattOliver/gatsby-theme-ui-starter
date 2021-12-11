@@ -6,9 +6,17 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import styled from "styled-components"
 import { createGlobalStyle } from "styled-components"
-
+import { ThemeProvider } from "theme-ui"
+import Prism from "@theme-ui/prism"
 import Header from "../Header"
 import Footer from "../Footer"
+
+import theme from "../../theme"
+
+const components = {
+  pre: ({ children }) => <>{children}</>,
+  code: Prism,
+}
 
 const GlobalStyle = createGlobalStyle`
   body, html {
@@ -28,19 +36,19 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <ThemeProvider theme={theme} components={components}>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Wrapper>
         <main>{children}</main>
         <Footer />
       </Wrapper>
-    </>
+    </ThemeProvider>
   )
 }
 
 const Wrapper = styled.div`
-  margin: 0 auto;
+  padding: 0 2rem;
 `
 
 Layout.propTypes = {

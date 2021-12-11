@@ -8,9 +8,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
+import { useThemeUI } from "theme-ui"
+
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
+  const { theme } = useThemeUI()
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -69,7 +72,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <meta name="theme-color" content={theme.colors.primary} />
+    </Helmet>
   )
 }
 
