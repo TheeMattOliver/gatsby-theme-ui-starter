@@ -71,10 +71,12 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `theme-color`,
+          content: theme.colors.primary,
+        },
       ].concat(meta)}
-    >
-      <meta name="theme-color" content={theme.colors.primary} />
-    </Helmet>
+    ></Helmet>
   )
 }
 
