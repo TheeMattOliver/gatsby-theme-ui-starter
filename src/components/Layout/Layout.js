@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-pascal-case */
 /** @jsxImportSource theme-ui */
 
 import * as React from "react"
@@ -15,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     height: 100%;
   }
-  
 `
 
 const Layout = ({ children }) => {

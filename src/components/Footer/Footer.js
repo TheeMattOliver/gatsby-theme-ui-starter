@@ -1,3 +1,5 @@
+/** @jsxImportSource theme-ui */
+
 import React from "react"
 
 export default function Footer() {
@@ -5,7 +7,9 @@ export default function Footer() {
     <footer>
       © {new Date().getFullYear()}, Built with
       {` `}
-      <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <a sx={{ color: "primary" }} href="https://www.gatsbyjs.com">
+        Gatsby
+      </a>
     </footer>
   )
 }
