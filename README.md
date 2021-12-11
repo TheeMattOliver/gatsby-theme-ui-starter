@@ -3,8 +3,8 @@
 <p align="center">
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a> 
-  <span style="font-size: 72px;"> + </span> 
+  </a>
+
   <a href="https://theme-ui.com/">
     <img alt="Theme UI" src="https://contrast-swatch.daneden.vercel.app/000/fff?size=128&fontSize=2&text=UI" width="60" />
   </a>
