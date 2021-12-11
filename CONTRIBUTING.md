@@ -15,7 +15,7 @@ These steps require [Node.js](https://nodejs.org) and [Yarn](https://yarnpkg.com
 ```shell
 # Clone the repository
 git clone https://github.com/TheeMattOliver/gatsby-theme-ui-boilerplate.git
-cd doctocat
+cd gatsby-theme-ui-boilerplate
 
 # Install the dependencies
 npm install
@@ -37,7 +37,7 @@ npm start
 ```
 
 - `src/`: This directory contains the code for the [Theme UI object](https://theme-ui.com/getting-started) and a folder with a few components -- like `<Layout>`, `<Header>`, `<Footer>`, etc.
-- `docs/`: This directory contains the code for the documentation site for Doctocat. The documentation site can also be used to test changes to the theme locally.
+- `templates/`: This directory contains boilerplate to demo "Deferred Static Generation."
 - `package.json`: This file defines the [Dependencies](https://github.com/npm/npm/blob/2e3776bf5676bc24fec6239a3420f377fe98acde/doc/files/package.json.md#dependencies) for the project.
 
 ## Scripts
