@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby & Theme-UI`,
     description: `Gatsby & Theme UI`,
-    author: `@gatsbyjs`,
+    author: `@TheeMattOliver`,
     siteUrl: `https://github.com/TheeMattOliver/gatsby-theme-ui-boilerplate`,
   },
   plugins: [

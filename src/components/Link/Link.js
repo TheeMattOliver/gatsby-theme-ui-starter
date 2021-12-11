@@ -9,11 +9,13 @@ export default props => (
     activeClassName="active"
     sx={{
       color: "primary",
+      textDecoration: "none",
       "&.active": {
         color: "primary",
       },
       "&.hover": {
         color: "secondary",
+        textDecoration: "underline",
       },
     }}
   />

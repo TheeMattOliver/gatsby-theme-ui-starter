@@ -110,6 +110,11 @@ module.exports = {
       "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
   },
   fontSizes: [12, 14, 16, 18, 24, 32, 48, 64, 72],
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
   lineHeights: {
     body: 1.75,
     heading: 1.25,
@@ -121,8 +126,10 @@ module.exports = {
     },
     a: {
       color: "primary",
+      textDecoration: "none",
       "&:hover": {
         color: "secondary",
+        textDecoration: "underline",
       },
     },
     h1: {
@@ -194,17 +201,18 @@ module.exports = {
     },
     ul: {
       pl: 3,
-      ul: {
-        // pl: 2
-        // textIndent: '1em',
-      },
+    },
+    ol: {
+      pl: 3,
     },
     table: {
       width: "100%",
       my: 4,
       // borderColor: colors.gray,
-      borderCollapse: "separate",
+      border: "1px solid lightgray",
+      borderCollapse: "collapse",
       borderSpacing: 0,
+      overflow: "auto",
     },
     th: {
       textAlign: "left",
@@ -213,25 +221,38 @@ module.exports = {
       paddingBottom: "4px",
       paddingRight: "4px",
       paddingLeft: 0,
-      borderColor: "inherit",
-      borderBottomWidth: "2px",
-      borderBottomStyle: "solid",
+      // borderColor: "inherit",
+      // borderBottomWidth: "2px",
+      // borderBottomStyle: "solid",
+      border: "1px solid lightgray",
+      fontWeight: "bold",
     },
     td: {
       textAlign: "left",
       verticalAlign: "top",
-      paddingTop: "4px",
-      paddingBottom: "4px",
-      paddingRight: "4px",
-      paddingLeft: 0,
-      borderColor: "inherit",
-      borderBottomWidth: "1px",
-      borderBottomStyle: "solid",
+      padding: "8px 12px",
+      border: "1px solid lightgray",
+      // borderColor: "inherit",
+      // borderBottomWidth: "1px",
+      // borderBottomStyle: "solid",
+    },
+    tr: {
+      borderTop: "1px solid gray",
+      "&:nth-of-type(2n)": {
+        bg: "lightgray",
+      },
     },
     hr: {
       border: 0,
       borderBottom: "1px solid",
       borderColor: "lightgray",
+    },
+    blockquote: {
+      margin: "0 0 1rem",
+      color: "midgray",
+      padding: "0 16px",
+      borderLeft: "0.25em solid gray",
+      borderLeftWidth: "4px",
     },
   },
 }
