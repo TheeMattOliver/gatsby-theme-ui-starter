@@ -39,10 +39,12 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme} components={components}>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Wrapper>
-        <main>{children}</main>
-        <Footer />
-      </Wrapper>
+      <Container>
+        <Wrapper>
+          <main>{children}</main>
+          <Footer />
+        </Wrapper>
+      </Container>
     </ThemeProvider>
   )
 }
@@ -50,7 +52,18 @@ const Layout = ({ children }) => {
 const Wrapper = styled.div`
   padding: 0 2rem;
 `
-
+const Container = styled.div`
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  // this img rule is over-specific and will cause problems in the cascade;
+  // it's being used to illustrate how large images should render in MDX
+  // according to a theme in 'pages/using-mdx.mdx'
+  img {
+    max-width: 100%;
+    box-sizing: content-box;
+  }
+`
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }

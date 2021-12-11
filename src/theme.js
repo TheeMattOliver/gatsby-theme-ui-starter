@@ -111,9 +111,11 @@ module.exports = {
   },
   fontSizes: [12, 14, 16, 18, 24, 32, 48, 64, 72],
   fontWeights: {
-    body: 400,
-    heading: 700,
-    bold: 700,
+    light: 200,
+    regular: 400,
+    medium: 500,
+    bold: 600,
+    heavy: 700,
   },
   lineHeights: {
     body: 1.75,
@@ -253,6 +255,13 @@ module.exports = {
       padding: "0 16px",
       borderLeft: "0.25em solid gray",
       borderLeftWidth: "4px",
+    },
+    dl: {
+      padding: "0",
+    },
+    dt: {
+      fontSize: "1em",
+      fontStyle: "italic",
     },
   },
 }

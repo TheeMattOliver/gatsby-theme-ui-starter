@@ -2,7 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import { css, useColorMode } from "theme-ui"
+import { useColorMode } from "theme-ui"
 
 import InvisibleButton from "../Button/InvisibleButton"
 import Link from "../Link"
