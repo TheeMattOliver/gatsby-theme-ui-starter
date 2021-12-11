@@ -10,6 +10,12 @@ export default function Footer() {
       <a sx={{ color: "primary" }} href="https://www.gatsbyjs.com">
         Gatsby
       </a>
+      {` `}
+      &#38;
+      {` `}
+      <a sx={{ color: "primary" }} href="https://theme-ui.com/">
+        Theme UI
+      </a>
     </footer>
   )
 }
