@@ -1,6 +1,4 @@
----
-title: Contributing
----
+## CONTRIBUTING
 
 We appreciate your contribution and hope that this document helps you along the way!
 
