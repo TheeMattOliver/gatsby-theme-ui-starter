@@ -4,7 +4,6 @@
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
-
   <a href="https://theme-ui.com/">
     <img alt="Theme UI" src="https://contrast-swatch.daneden.vercel.app/000/fff?size=128&fontSize=2&text=UI" width="60" />
   </a>
@@ -22,17 +21,45 @@ Kick off your project with this boilerplate. This starter ships with Gatsby conf
     Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the gatsby-theme-ui starter.
 
     ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
+    # create a new Gatsby site using the gatsby-theme-ui starter
+    gatsby new my-gatsby-theme-ui-starter https://github.com/TheeMattOliver/gatsby-theme-ui-boilerplate
+
     ```
 
 1.  **Edit the theme object.**
 
-    Navigate into your new site’s directory and start it up.
+    ```js
+    fonts: {
+      body: 'system-ui, sans-serif',
+      heading: '"Avenir Next", sans-serif',
+      monospace: 'Menlo, monospace',
+    },
+    colors: {
+      text: '#000',
+      background: '#fff',
+      primary: '#33e',
+    }
+    ```
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
+1.  **Style your UI.**
+
+    ```jsx
+    /** @jsxImportSource theme-ui */
+    import { ThemeProvider } from "theme-ui"
+    import { theme } from "./theme"
+
+    export const App = () => (
+      <ThemeProvider theme={theme}>
+        <h1
+          sx={{
+            color: "primary",
+            fontFamily: "heading",
+          }}
+        >
+          Hello
+        </h1>
+      </ThemeProvider>
+    )
     ```
 
 1.  **Start developing.**
@@ -40,7 +67,7 @@ Kick off your project with this boilerplate. This starter ships with Gatsby conf
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-hello-world-starter/
+    cd my-gatsby-theme-ui-starter/
     gatsby develop
     ```
 
