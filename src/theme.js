@@ -256,12 +256,5 @@ module.exports = {
       borderLeft: "0.25em solid gray",
       borderLeftWidth: "4px",
     },
-    dl: {
-      padding: "0",
-    },
-    dt: {
-      fontSize: "1em",
-      fontStyle: "italic",
-    },
   },
 }
